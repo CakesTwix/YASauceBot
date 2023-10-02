@@ -1,0 +1,2 @@
+aiogram
+git+https://github.com/teppyboy/saucerer
