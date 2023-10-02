@@ -1,14 +1,15 @@
 from aiogram import F
 from saucebot.bot import dp
 from aiogram.types import Message
-from saucerer import Saucerer
 from saucebot.utils import sauce2text
 from saucebot.bot import bot, saucerer
 from aiogram.types import URLInputFile
 
+
 @dp.message(F.photo)
-async def all_photo_handler(message: Message):
+async def all_photo_handler(message: Message) -> None:
     """
+    Handler for all photo processing. Process them through SauceNao and send the result to the user.
     """
     search_result = (await saucerer.search(
         await bot.download(
@@ -21,4 +22,3 @@ async def all_photo_handler(message: Message):
         sauce2text(search_result[0])
     )
 
-    # await saucerer.close()

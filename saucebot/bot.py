@@ -13,6 +13,7 @@ saucerer = Saucerer()
 # All handlers should be attached to the Router (or Dispatcher)
 dp = Dispatcher()
 
+
 async def main() -> None:
     # And the run events dispatching
     await dp.start_polling(bot)

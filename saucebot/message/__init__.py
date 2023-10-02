@@ -1,4 +1,4 @@
 from . import (
-    photo, 
-    start
+    start,
+    photo,
 )
